@@ -1,0 +1,7 @@
+{
+  "profiles": {
+    "Akkatecture.Examples.Worker": {
+      "commandName": "Project"
+    }
+  }
+}

@@ -21,8 +21,16 @@
     <PackageReleaseNotes>Externally Updated</PackageReleaseNotes>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="Microsoft.Azure.DocumentDB.Core" Version="1.9.1" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\..\..\src\Akkatecture.Clustering\Akkatecture.Clustering.csproj" />
     <ProjectReference Include="..\..\simple\Akkatecture.Examples.Domain\Akkatecture.Examples.Domain.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Akka.Persistence.CosmosDB">
+      <HintPath>..\..\..\..\..\GH\Akka.Persistence.CosmosDB\Akka.Persistence.CosmosDB\bin\Debug\netstandard2.0\Akka.Persistence.CosmosDB.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <None Update="worker.conf">

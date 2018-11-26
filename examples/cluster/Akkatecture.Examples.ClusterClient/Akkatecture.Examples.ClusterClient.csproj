@@ -25,6 +25,11 @@
     <ProjectReference Include="..\..\simple\Akkatecture.Examples.Domain\Akkatecture.Examples.Domain.csproj" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="Akka.Persistence.CosmosDB">
+      <HintPath>..\..\..\..\..\GH\Akka.Persistence.CosmosDB\Akka.Persistence.CosmosDB\bin\Debug\netstandard2.0\Akka.Persistence.CosmosDB.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
     <None Update="client.conf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

@@ -189,7 +189,7 @@ namespace Akkatecture.Sagas.AggregateSaga
 
             Persist(aggregateEvent, aggregateApplyMethod);
 
-            Logger.Info($"[{Name}] With Id={Id} Commited [{typeof(TAggregateEvent).PrettyPrint()}]");
+            Logger.Info($"[{Name}] With Id={Id} Committed [{typeof(TAggregateEvent).PrettyPrint()}]");
 
             Version++;
 

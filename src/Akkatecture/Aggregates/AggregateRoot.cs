@@ -146,7 +146,7 @@ namespace Akkatecture.Aggregates
 
             Persist(aggregateEvent, aggregateApplyMethod);
 
-            Logger.Info($"[{Name}] With Id={Id} Commited [{typeof(TAggregateEvent).PrettyPrint()}]");
+            Logger.Info($"[{Name}] With Id={Id} Committed [{typeof(TAggregateEvent).PrettyPrint()}]");
 
             Version++;
                 
@@ -183,7 +183,7 @@ namespace Akkatecture.Aggregates
                 eventMetadata.AddRange(metadata);
             }
 
-            Logger.Info($"[{Name}] With Id={Id} Commited [{typeof(TAggregateEvent).PrettyPrint()}]");
+            Logger.Info($"[{Name}] With Id={Id} Committed [{typeof(TAggregateEvent).PrettyPrint()}]");
 
             var domainEvent = new DomainEvent<TAggregate,TIdentity,TAggregateEvent>(aggregateEvent,eventMetadata,now,Id,Version);
 
