@@ -67,10 +67,11 @@ namespace Akkatecture.Examples.ClusterClient
                 aggregateProxy.Tell(createUserAccountCommand);
 
                 Console.WriteLine($"CreateUsrAccountCommand: Id={createUserAccountCommand.AggregateId}; Name={createUserAccountCommand.Name} Sent.");
-                //var changeNameAccountCommand = new UserAccountChangeNameCommand(aggregateId, randomUserAccountName + " changed" );
-                //aggregateProxy.Tell(changeNameAccountCommand);
 
-                //Console.WriteLine($"UserAccountChangeNameCommand: Id={changeNameAccountCommand.AggregateId}; Name={changeNameAccountCommand.Name} Sent.");
+                var changeNameAccountCommand = new UserAccountChangeNameCommand(aggregateId, randomUserAccountName + " changed");
+                aggregateProxy.Tell(changeNameAccountCommand);
+
+                Console.WriteLine($"UserAccountChangeNameCommand: Id={changeNameAccountCommand.AggregateId}; Name={changeNameAccountCommand.Name} Sent.");
 
                 Console.WriteLine("Press Enter To Create Another Random User Account, or Q to quit.");
                 key = Console.ReadLine();
